@@ -4,6 +4,15 @@
 
 ---
 
+## Screenshots
+
+Captured from a local run with seed data. The full write-up is on [my portfolio](https://kandeel11.github.io/#vortex).
+
+<table>
+<tr><td width="50%"><img src="docs/screenshots/vortex-catalog.webp" alt="Vortex product catalog with category and price filters and a grid of products"/><br/><sub>The shop: category and price filters over products from two seller stores.</sub></td><td width="50%"><img src="docs/screenshots/vortex-seller.webp" alt="Seller dashboard with monthly revenue line chart and orders-by-status doughnut chart"/><br/><sub>A seller’s dashboard: monthly revenue, orders by status and top products.</sub></td></tr>
+<tr><td width="50%"><img src="docs/screenshots/vortex-admin.webp" alt="Admin overview with platform counts and monthly sales chart"/><br/><sub>Admin overview: customers, sellers, orders and revenue across the whole platform.</sub></td><td width="50%"><img src="docs/screenshots/vortex-admin-products.webp" alt="Admin products table listing each product with category, seller, price, stock and status"/><br/><sub>Admin product table across every seller, with stock and status.</sub></td></tr>
+</table>
+
 ## Tech Stack
 
 **Frontend**
