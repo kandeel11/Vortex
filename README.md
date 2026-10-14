@@ -194,6 +194,26 @@ Authentication uses **HttpOnly cookies** for JWT storage, preventing XSS attacks
 
 ---
 
+## Secrets
+
+API keys and passwords are not stored in `appsettings.json`. Set them with .NET user secrets before running the API:
+
+```bash
+cd ECommerce.API
+dotnet user-secrets set "Jwt:Key" "<at least 32 random characters>"
+dotnet user-secrets set "StripeSettings:SecretKey" "<Stripe secret key>"
+dotnet user-secrets set "StripeSettings:WebhookSecret" "<Stripe webhook signing secret>"
+dotnet user-secrets set "PayPalSettings:ClientId" "<PayPal sandbox client id>"
+dotnet user-secrets set "PayPalSettings:Secret" "<PayPal sandbox secret>"
+dotnet user-secrets set "Authentication:Google:ClientId" "<Google OAuth client id>"
+dotnet user-secrets set "Authentication:Google:ClientSecret" "<Google OAuth client secret>"
+dotnet user-secrets set "Authentication:Facebook:AppId" "<Facebook app id>"
+dotnet user-secrets set "Authentication:Facebook:AppSecret" "<Facebook app secret>"
+dotnet user-secrets set "EmailSettings:EmailUsername" "<Gmail address>"
+dotnet user-secrets set "EmailSettings:EmailPassword" "<Gmail app password>"
+```
+
+`Jwt:Key` is needed for login; the others are needed for payments, social login and email.
 ## Environment Configuration
 
 Frontend environment (`src/environments/environment.ts`):
